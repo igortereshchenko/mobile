@@ -9,19 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SimpleActivity">
 
-        </activity>
-
-        <activity
-            android:name=".LessonLayouts.LinearLayoutActivity"
-            android:label="@string/title_activity_linear_layout"
-            android:theme="@style/AppTheme.NoActionBar">
-
+        <activity android:name=".LessonLayouts.RelativeLayoutActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"></action>
+
+                <category android:name="android.intent.category.LAUNCHER"></category>
+
             </intent-filter>
 
         </activity>
