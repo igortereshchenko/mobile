@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LessonLayouts.ConstraintLayoutActivity"
+    tools:showIn="@layout/activity_constraint_layout">
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="98dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/koala" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Этимология Слово коала (англ. koala) происходит от даракского[en] слова gulawan или его укороченной формы gula. Первоначально транскрибированное на латинский шрифт как cullawine, его постепенно вытеснил вариант koola. Хотя гласная /u/ была первоначально написана в английской орфографии как «оо», она, возможно по ошибке, было изменена на «oa»[2]. Ошибочно считалось, что это слово означало «не пьёт»[2].  Видовое название cinereus было предложено в 1817 году Георгом Августом Гольдфусом, и с латинского языка означает «пепельный»[3][4].  Несмотря на то, что таксономически коалы не являются медведями или близкими к ним животными, англоговорящие поселенцы конца XVIII века называли их медведем коала (англ. koala bear) из-за внешнего сходства коал и медведей и это название до сих пор используется за пределами Австралии[5], хотя его использование не рекомендуется из-за возникающей амбивалентности названия[6][7][8][9][10].  Ареал Естественный ареал коалы включает в себя прибрежные районы на востоке и юге Австралии, на территории от Аделаиды на севере, до южной части полуострова Кейп-Йорк. Также они распространены в регионах с достаточным количеством влаги для поддержки подходящих коалам лесов. Коалы штата Южная Австралия были в значительной степени уничтожены в течение первой половины XX века, но с помощью особей из штата Виктория, популяция коал в Южной Австралии восстановлена. В начале XX века они были завезены в Янчепe в Западной Австралии[11], а также на ряд островов у побережья Квинсленда, в том числе острове Кенгуру и Магнитный остров, который предположительно является самой северной оконечностью современного ареала коал. Общая площадь ареала коал составляет около 1 000 000 км² и включает в себя не менее 30 биогеографических регионов[12].  История изучения Коалы остались незамеченными экспедицией Джеймса Кука, в 1770 году открывшей восточное побережье Австралии. Первое упоминание о них встречается в отчёте Джона Прайса, слуги губернатора Нового Южного Уэльса Джона Хантера, о путешествии в Голубые горы в 1798 году. Прайс пишет, что в Голубых горах водится животное, называемое куллавайн, внешне похожее на ленивца[13]. Для науки коала был открыт в 1802 году флотским офицером Барралье, который обнаружил у аборигенов останки коалы и послал заспиртованные конечности зверя Филипу Кингу[en], губернатору Нового Южного Уэльса[14]. В июне 1803 года живой коала был пойман к югу от Сиднея, а 21 августа газета Sydney Gazette поместила его подробное описание[13]. В 1808 году коалы были определены как вид схожий с вомбатами.  Примерно в течение полувека коал находили только в пределах Нового Южного Уэльса. В 1855 году натуралист Уильям Бландовски встретил его в штате Виктория, а в 1923 году О. Томас — в юго-восточной части Квинсленда[15]."
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="296dp" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

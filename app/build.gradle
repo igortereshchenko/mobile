@@ -24,6 +24,7 @@ android {
     sourceSets{
         main{
             res.srcDirs = [
+                    'src/main/res/layout/lesson_activity',
                     'src/main/res/layout/lesson_layout',
                     'src/main/res/layout',
                     'src/main/res']
