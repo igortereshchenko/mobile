@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:text="Password"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText4"
-        app:layout_constraintEnd_toStartOf="@+id/editText4" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtPass"
+        app:layout_constraintEnd_toStartOf="@+id/txtPass" />
 
     <EditText
         android:id="@+id/txtLoginLogin"
@@ -34,10 +34,10 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintEnd_toEndOf="@+id/editText4"
+        app:layout_constraintBottom_toTopOf="@+id/txtPass"
+        app:layout_constraintEnd_toEndOf="@+id/txtPass"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText4" />
+        app:layout_constraintStart_toStartOf="@+id/txtPass" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -61,11 +61,11 @@
         android:layout_marginTop="8dp"
         android:text="Not registered? Do it now!"
         android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintStart_toStartOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintStart_toStartOf="@+id/txtPass"
+        app:layout_constraintTop_toBottomOf="@+id/txtPass" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/txtPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
