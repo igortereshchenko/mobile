@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="Password"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtPassword"
-        app:layout_constraintEnd_toStartOf="@+id/txtPassword" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblPassword"
+        app:layout_constraintEnd_toStartOf="@+id/lblPassword" />
 
     <EditText
         android:id="@+id/txtLogin"
@@ -33,12 +33,12 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtPassword"
-        app:layout_constraintEnd_toEndOf="@+id/txtPassword"
-        app:layout_constraintStart_toStartOf="@+id/txtPassword" />
+        app:layout_constraintBottom_toTopOf="@+id/lblPassword"
+        app:layout_constraintEnd_toEndOf="@+id/lblPassword"
+        app:layout_constraintStart_toStartOf="@+id/lblPassword" />
 
     <EditText
-        android:id="@+id/txtPassword"
+        android:id="@+id/lblPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -74,6 +74,6 @@
         android:layout_marginTop="20dp"
         android:text="Not registered? Do it now!"
         android:textColor="@android:color/holo_blue_dark"
-        app:layout_constraintStart_toStartOf="@+id/txtPassword"
-        app:layout_constraintTop_toBottomOf="@+id/txtPassword" />
+        app:layout_constraintStart_toStartOf="@+id/lblPassword"
+        app:layout_constraintTop_toBottomOf="@+id/lblPassword" />
 </android.support.constraint.ConstraintLayout>
