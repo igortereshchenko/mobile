@@ -50,7 +50,10 @@ public class DatePickerControlActivity extends AppCompatActivity {
         btnOk.setOnClickListener(view -> {
 
             Intent intent = new Intent();
-            intent.putExtra(BIRTHDAY,"12/12/12");
+
+            String date = datePicker.getDayOfMonth()+"/" +datePicker.getMonth()+"/"+datePicker.getYear();
+
+            intent.putExtra(BIRTHDAY,date);
 
             setResult(RESULT_OK, intent);
 

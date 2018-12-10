@@ -63,7 +63,7 @@ public class ProfileActivity  extends AppCompatActivity{
         if (requestCode == REQUEST_DATE){
 
 
-            if (requestCode ==RESULT_OK){
+            if (resultCode ==RESULT_OK){
 
                 String birthdays =  data.getExtras().getString(DatePickerControlActivity.BIRTHDAY);
 
