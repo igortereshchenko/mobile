@@ -11,6 +11,13 @@ import tereshchenko.igor.mobile.R;
 
 public class LoginActivity  extends AppCompatActivity{
 
+    public static final String LOGIN = "LoginActivity_login";
+
+    public static final String PASSWORD = "LoginActivity_password";
+
+
+    public static final String REGIME = "LoginActivityregime";
+
     protected void onCreate(Bundle stage){
         super.onCreate(stage);
 
@@ -25,10 +32,24 @@ public class LoginActivity  extends AppCompatActivity{
             EditText txtLogin = (EditText) findViewById(R.id.txtLoginLogin);
             EditText txtPassword = (EditText) findViewById(R.id.txtPass);
 
-            container.putExtra("login",txtLogin.getText());
-            container.putExtra("password",txtPassword.getText());
+
+            container.putExtra(LOGIN,txtLogin.getText().toString());
+            container.putExtra(PASSWORD,txtPassword.getText().toString());
+            container.putExtra(REGIME,ProfileActivity.REGIME_PROFILE);
 
             startActivity(container);
+        });
+
+
+        TextView lblRegistered = (TextView)findViewById(R.id.lblRegister);
+        lblRegistered.setOnClickListener(view -> {
+
+            Intent container = new Intent(this,ProfileActivity.class);
+
+            container.putExtra(REGIME,ProfileActivity.REGIME_REGISTER);
+
+            startActivity(container);
+
         });
     }
 }
