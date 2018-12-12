@@ -30,17 +30,22 @@
 
 
         <activity android:name=".LessonActivity.LoginActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
 
         <activity android:name=".LessonActivity.ProfileActivity"/>
 
         <activity android:name=".LessonActivity.DatePickerControlActivity"/>
+
+
+        <activity android:name=".LessonActivity.CustomAdapter.NewsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 
