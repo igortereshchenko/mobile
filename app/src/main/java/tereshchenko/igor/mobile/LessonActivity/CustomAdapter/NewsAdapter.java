@@ -7,10 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Filter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import tereshchenko.igor.mobile.R;
@@ -18,6 +21,9 @@ import tereshchenko.igor.mobile.R;
 public class NewsAdapter extends ArrayAdapter<News> {
 
     private List<News> news;
+
+    private List<News> filtered_news;
+
     private int news_layout;
     private LayoutInflater inflater;
 
@@ -26,6 +32,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         this.news = objects;
         this.news_layout = resource;
+        this.filtered_news = objects;
 
         this.inflater = LayoutInflater.from(context);
     }
@@ -47,7 +54,8 @@ public class NewsAdapter extends ArrayAdapter<News> {
             viewHandler =(ViewHandler) currentView.getTag();
 
 
-        final News current_news = news.get(index);
+
+        final News current_news = filtered_news.get(index);
 
         viewHandler.txtTitle.setText(current_news.getTitle());
 
@@ -66,6 +74,63 @@ public class NewsAdapter extends ArrayAdapter<News> {
     }
 
 
+    @NonNull
+    @Override
+    public Filter getFilter() {
+
+        Filter myFilter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence condition) {
+
+                FilterResults results = new FilterResults();
+                ArrayList<News> filtered  = new ArrayList<>();
+
+                // TODO news not empty
+
+                if (condition==null|| condition.length()==0){
+                    results.count = news.size();
+                    results.values = news;
+                }
+                else{
+                    String condition_str = condition.toString();
+
+                    for (int i=0; i<news.size();i++){
+                        String current_title= news.get(i).getTitle();
+                        if (current_title.toLowerCase().startsWith(condition_str.toLowerCase())){
+                            filtered.add(news.get(i));
+                        }
+                    }
+
+                    results.count = filtered.size();
+                    results.values = filtered;
+                }
+
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence charSequence, FilterResults filterResults) {
+
+
+                filtered_news = (List<News>)filterResults.values;
+                notifyDataSetChanged();
+
+            }
+        };
+
+        return myFilter;
+
+    }
+
+    @Override
+    public int getCount() {
+        return filtered_news.size();
+    }
+
+    public News getItem(int position){
+
+        return filtered_news.get(position);
+    }
 
     private class ViewHandler{
 
