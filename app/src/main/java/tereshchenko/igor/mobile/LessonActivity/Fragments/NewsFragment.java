@@ -34,13 +34,10 @@ public class NewsFragment extends Fragment {
         for(int i=1; i<=10;i++)
             news.add(new News("Title "+i, "Context dfjhsd gjklhsdfjkgh lsdfhglkjsdfhjlkgh sdlfjkh  kghdjkfh"+i,new Date(),"path"));
 
+
         ListView listNews = (ListView) search_layout.findViewById(R.id.listNews);
-
-         adapter = new NewsAdapter(search_layout.getContext(),R.layout.news_layout,news);
-
-
-
-        listNews.setAdapter(adapter);
+        adapter = new NewsAdapter(search_layout.getContext(),R.layout.news_layout,news);
+       listNews.setAdapter(adapter);
 
         return search_layout;
 
