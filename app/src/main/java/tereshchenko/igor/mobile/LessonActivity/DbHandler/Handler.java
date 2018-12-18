@@ -49,7 +49,7 @@ public class Handler {
 
         SQLiteDatabase db = ((AppCompatActivity)context).getBaseContext().openOrCreateDatabase("android_test_db.db",Context.MODE_PRIVATE,null);
 
-        Cursor cursor = db.rawQuery("SELECT * FROM test_table",null);
+        Cursor cursor = db.rawQuery("SELECT * FROM text_table",null);
 
 
         if (cursor.moveToFirst()){
