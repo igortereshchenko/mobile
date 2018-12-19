@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="tereshchenko.igor.mobile">
 
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,40 +19,29 @@
         <activity
             android:name=".LessonLayouts.TableLayoutActivity"
             android:label="@string/title_activity_table_layout"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".LessonLayouts.ScrollViewActivity"
             android:label="@string/title_activity_scroll_view"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".LessonLayouts.ConstraintLayoutActivity"
             android:label="@string/title_activity_constraint_layout"
-            android:theme="@style/AppTheme.NoActionBar">
-
-
-        </activity>
-
-
-        <activity android:name=".LessonActivity.LoginActivity">
-
-        </activity>
-
-
-        <activity android:name=".LessonActivity.ProfileActivity"/>
-
-        <activity android:name=".LessonActivity.DatePickerControlActivity"/>
-
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".LessonActivity.LoginActivity"></activity>
+        <activity android:name=".LessonActivity.ProfileActivity" />
+        <activity android:name=".LessonActivity.DatePickerControlActivity" />
         <activity android:name=".LessonActivity.CustomAdapter.NewsActivity">
+
+        </activity>
+        <activity android:name=".LessonActivity.WebActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
 
+        </activity>
     </application>
 
 </manifest>

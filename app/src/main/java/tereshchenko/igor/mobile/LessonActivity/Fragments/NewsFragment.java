@@ -35,10 +35,10 @@ public class NewsFragment extends Fragment {
         search_layout = inflater.inflate(R.layout.news_list_layout,container,false);
 
 
-        ArrayList<News> news = new ArrayList<>();
-
-        for(int i=1; i<=10;i++)
-            news.add(new News("Title "+i, "Context dfjhsd gjklhsdfjkgh lsdfhglkjsdfhjlkgh sdlfjkh  kghdjkfh"+i,new Date(),"path"));
+//        ArrayList<News> news = new ArrayList<>();
+//
+//        for(int i=1; i<=10;i++)
+//            news.add(new News("Title "+i, "Context dfjhsd gjklhsdfjkgh lsdfhglkjsdfhjlkgh sdlfjkh  kghdjkfh"+i,new Date(),"path"));
 
 
         ListView listNews = (ListView) search_layout.findViewById(R.id.listNews);
